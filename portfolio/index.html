@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" ></script>
     <title>Fitz Mina</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
             <h2>Fitz Mina</h2>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#portfolio">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -53,43 +53,15 @@
                     </div>
                     <ul class="dropdown-menu">
                         <li class="dropdown-active" data-card="#dice">2 Player Dice Game - JS</li>
-                        <li data-card="#timer">Timer -JS</li>
+                        <li data-card="#timer">Timer - JS</li>
+                        <li data-card="#rps">Rock — Paper — Scissors - JS</li>
                         <!-- <li data-card="#todo">To-Do List</li> -->
                     </ul>    
                 </div>
 
+                <div class="porfolio-description"></div>
 
-                <div class="porfolio-description" >
-                    <div class="port-desc show">
-                        <p >Two Player Dice Game with 3D dice animation and Score tracker. Made from scratch using HTML, CSS, and Vanilla JavaScript.</p>
-                    </div>
-                    
-                    <div class="port-desc">
-                        <p >Timer App. User can set the timer up to 99 hours. Made from scratch using HTML, CSS, and Vanilla JavaScript.</p>
-                    </div>
-                    
-                </div>
-
-                <div class="portfolio-card">
-                    <a href="https://fitzmina.github.io/dice/" target="_blank" class="card-content dice card-show" id="dice">
-                        <div class="portfolio-img-container">
-                            <img src="img/dice.png" alt="dice">
-                        </div>
-
-                        <div class="portfolio-text-container">
-                            <p>2 Player Dice Game - JS</p>
-                        </div>
-                    </a>
-
-                    <a href="https://fitzmina.github.io/timer/" target="_blank" class="card-content timer " id="timer">
-                        <div class="portfolio-img-container">
-                            <img src="img/timer.png" alt="timer">
-                        </div>
-                        <div class="portfolio-text-container">
-                            <p>Timer - JS</p>
-                        </div>
-                    </a>
-                </div>
+                <div class="portfolio-card"></div>
             </div>
         </section>
 
@@ -101,9 +73,9 @@
                     <button class="skill-btn js-btn">JavaScript</button>
                     <button class="skill-btn html-btn">HTML</button>
                     <button class="skill-btn css-btn">CSS</button>
-                    <button class="skill-btn react-btn">React</button>
-                    <button class="skill-btn node-btn">Node.js</button>
-                    <button class="skill-btn next-btn">Next.js</button>
+                    <button title="await" class="skill-btn react-btn">React</button>
+                    <button title="await" class="skill-btn node-btn">Node.js</button>
+                    <button title="await" class="skill-btn next-btn">Next.js</button>
                 </div>
                 <div class="container">
                     <div class="cube">
@@ -121,7 +93,8 @@
         <section id="about" class="main-section-container">
                 <h3>About</h3>
                 <div class="about-p-container">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sunt deleniti eaque reprehenderit nemo voluptates deserunt ut cupiditate, veniam porro. Repellat aperiam facere quibusdam libero, quasi voluptas! Repellendus, ipsam quas!</p>
+                    <p>I put all of the JavaScript knowledge I had acquired and learnt to use creating this website and my other projects. Based on this, you can evaluate my abilities and knowledge. I created each of these from scratch using Vanilla JavaScript, Pure CSS, and HTML.
+                    </p>
 
                 </div>
                 

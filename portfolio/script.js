@@ -1,9 +1,100 @@
-// footer
-const footerYear = document.querySelector('#current-year');
-const currentYear = new Date();
-footerYear.innerText = currentYear.getFullYear();
-// footer 
+import './universal.js';
 
+//desc
+
+let descArray = [
+    {
+    descP : `Two Player Dice Game with 3D Dice Animation and Score Tracker. Made from scratch using HTML, Pure CSS, and Vanilla JavaScript.` 
+    },
+    {
+    descP : `Timer App. User can set the timer up to 99 hours. Made from scratch using HTML, Pure CSS, and Vanilla JavaScript.` 
+    },
+    {
+    descP : `Rock — Paper — Scissors Game VS Computer with Score Tracker. Made from scratch using HTML, Pure CSS, and Vanilla JavaScript.` 
+    }
+
+]
+
+const descriptionDiv = document.querySelector('.porfolio-description');
+
+descArray.forEach((array,i) => {
+    const descCreateDiv = document.createElement("div");
+    descCreateDiv.classList.add('port-desc');
+    
+    const descCreateP = document.createElement("p");
+    descCreateP.textContent = descArray[i].descP;   
+
+    descCreateDiv.appendChild(descCreateP);
+
+    descriptionDiv.appendChild(descCreateDiv);
+    
+});
+   
+descriptionDiv.children[0].classList.add('show');
+
+//desc
+
+//portfolio card
+
+let portCardArray = [
+    {
+        id: "dice",
+        link: "https://fitzmina.github.io/dice/",
+        img: "img/dice.png",
+        text: "Click to open",
+        target: "_blank"
+    },
+    {
+        id: "timer",
+        link: "https://fitzmina.github.io/timer/",
+        img: "img/timer.png",
+        text: "Click to open",
+        target: "_blank"
+    },
+    {
+        id: "rps",
+        link: "https://fitzmina.github.io/rps/",
+        img: "img/rps.png",
+        text: "Click to open",
+        target: "_blank"
+    }
+
+]
+
+const portfolioCardDiv = document.querySelector('.portfolio-card');
+
+portCardArray.forEach((array,i) => {
+    const portCardCreateA = document.createElement("a");
+    portCardCreateA.classList.add('card-content');
+    portCardCreateA.classList.add(portCardArray[i].id);
+    portCardCreateA.setAttribute("href", portCardArray[i].link);
+    portCardCreateA.setAttribute("id", portCardArray[i].id);
+    portCardCreateA.setAttribute("target", portCardArray[i].target);
+
+    
+    const portCreateDiv = document.createElement("div");
+    portCreateDiv.classList.add('portfolio-img-container');
+
+    const portCreateImg = document.createElement("img");
+    portCreateImg.src = portCardArray[i].img;
+
+    const portCreateP = document.createElement("p");
+    portCreateP.textContent = portCardArray[i].text;
+    portCreateP.classList.add('portfolio-text-container');
+
+    portCreateDiv.appendChild(portCreateImg);
+    portCreateDiv.appendChild(portCreateP);
+
+    portCardCreateA.appendChild(portCreateDiv);
+
+    portfolioCardDiv.appendChild(portCardCreateA);
+    
+});
+
+portfolioCardDiv.firstElementChild.classList.add('card-show');
+
+
+//portfolio card
 
 //SHUFFLE WORD
 
@@ -18,7 +109,7 @@ shuffleWord.addEventListener('mouseover', shuffle);
 // document.querySelector('.shuffle-word').onmouseover = function(){shuffle()};
 
 function shuffle(){
-    counter = 0;
+    let counter = 0;
     clearInterval(shuffleInterval);
     shuffleInterval = setInterval (() =>{
         
@@ -54,12 +145,13 @@ const typeWriter = document.querySelector('.typewriter');
 
 const typeWords = ['Web Developer','Financial Advisor', 'Technical Support'];
 
-typeChar = 0;
-typeIndex = 0;
+let typeChar = 0;
+let typeIndex = 0;
 
 
 const type = () =>{
     if(typeChar < typeWords[typeIndex].length){
+        typeWriter.style.animation = "none";
         typeWriter.textContent += typeWords[typeIndex].charAt(typeChar);
         typeChar++
         setTimeout(type, 200);
@@ -70,6 +162,7 @@ const type = () =>{
 
 const erase = () =>{
     if(typeChar > 0){
+        typeWriter.style.animation = "cursorBlink .3s infinite";
         typeWriter.textContent = typeWords[typeIndex].slice(0, typeChar-1);
         typeChar--;
         setTimeout(erase, 150);
@@ -93,81 +186,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-//hamburger
-
-const hamburger = document.querySelector('.fa-solid');
-const siteNavUl = document.querySelector('.site-nav ul');
-
-
-hamburger.addEventListener('click', () => {
-
-    if(hamburger.classList.contains('fa-bars')){
-        hamburger.classList.replace('fa-bars', 'fa-times')
-    }
-    else{
-        hamburger.classList.replace('fa-times', 'fa-bars')
-    }
-
-    siteNavUl.classList.toggle('show-menu');
-
-});
-
-siteNavUl.addEventListener('click', ()=>{
-    siteNavUl.classList.remove('show-menu');
-    hamburger.classList.replace('fa-times', 'fa-bars');
-});
-
-//hamburger
-
-//dark mode
-
-const dark = document.querySelector('.bi');
-const body = document.querySelector('body');
-const footer = document.querySelector('footer');
-
-
-dark.addEventListener('click', () => {
-
-
-
-    if(dark.classList.contains('bi-moon-stars')){
-        dark.classList.replace('bi-moon-stars', 'bi-brightness-high');
-        localStorage.setItem("mode", "light");
-    }
-    else{
-        dark.classList.replace('bi-brightness-high', 'bi-moon-stars');
-        localStorage.setItem("mode", "dark");
-    }
-
-    body.classList.toggle('light');
-    footer.classList.toggle('light');
-
-    
-
-});
-
-let getMode = localStorage.getItem("mode");
-
-if(getMode === "dark"){
-    body.classList.add('light');
-    footer.classList.add('light');
-    dark.classList.replace('bi-brightness-high', 'bi-moon-stars');
-}
-else{
-    body.classList.remove('light');
-    footer.classList.remove('light');
-    dark.classList.replace('bi-moon-stars', 'bi-brightness-high');
-}
-//dark mode
-
-
 //skill buttons
 const jsBtn = document.querySelector('.js-btn');
 const htmlBtn = document.querySelector('.html-btn');
 const cssBtn = document.querySelector('.css-btn');
-const reactBtn = document.querySelector('.react-btn');
-const nodeBtn = document.querySelector('.node-btn');
-const nextBtn = document.querySelector('.next-btn');
+// const reactBtn = document.querySelector('.react-btn');
+// const nodeBtn = document.querySelector('.node-btn');
+// const nextBtn = document.querySelector('.next-btn');
 const cube = document.querySelector('.cube');
 
 jsBtn.addEventListener('click',() =>{
@@ -205,6 +230,7 @@ const dropdownMenuLis = document.querySelectorAll('.dropdown-menu li');
 const cardContent = document.querySelectorAll('.card-content');
 
 const portDesc = document.querySelectorAll('.port-desc');
+
 
 selectBox.addEventListener('click', () => {
     dropdownMenu.classList.toggle('dropdown-open');
