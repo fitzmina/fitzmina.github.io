@@ -41,12 +41,17 @@ let sec = 0;
 
 
 
+
+
 hourUp.addEventListener('click', () =>{
     hourText.textContent = hour+=1;
     if(hour > 99 ){
         hour = 0;
         hourText.textContent = hour;  
     }
+    if(hourText.textContent < 10 ) {
+        hourText.textContent = '0' + hour;
+        }
 });
 
 hourDown.addEventListener('click', () =>{
@@ -55,6 +60,9 @@ hourDown.addEventListener('click', () =>{
         hour = 99;
         hourText.textContent = hour;   
     }
+    if(hourText.textContent < 10 ) {
+        hourText.textContent = '0' + hour;
+        }
 });
 
 minUp.addEventListener('click', () =>{
@@ -63,6 +71,9 @@ minUp.addEventListener('click', () =>{
         min = 0;
         minText.textContent = min;   
     }   
+    if(minText.textContent < 10 ) {
+        minText.textContent = '0' + min;
+        }
 });
 
 minDown.addEventListener('click', () =>{
@@ -71,6 +82,9 @@ minDown.addEventListener('click', () =>{
         min = 59;
         minText.textContent = min;
     }
+    if(minText.textContent < 10 ) {
+        minText.textContent = '0' + min;
+        }
 });
 
 secUp.addEventListener('click', () =>{
@@ -79,6 +93,9 @@ secUp.addEventListener('click', () =>{
         sec = 0;
         secText.textContent = sec;
     } 
+    if(secText.textContent < 10 ) {
+        secText.textContent = '0' + sec;
+        }
 });
 
 secDown.addEventListener('click', () =>{
@@ -87,6 +104,9 @@ secDown.addEventListener('click', () =>{
         sec = 59;
         secText.textContent = sec;
     }
+    if(secText.textContent < 10 ) {
+        secText.textContent = '0' + sec;
+        }
 });
 
 
@@ -117,28 +137,45 @@ btnStart.addEventListener('click', () => {
         dividerGroup.forEach(divider => {
             divider.classList.add('blink');
         });
+        dividerGroup.forEach(divider => {
+            divider.classList.add('marginDivider');
+        });
 
         titleGroup.forEach(title => {
             title.classList.add('hide');
         });
 
-        if(secText.textContent != 0 ){
-            secText.textContent = sec--;    
+            if(secText.textContent != 0 ){ 
+                sec = sec-1; 
+                secText.textContent = sec;
+            }
 
-        }
+            if(minText.textContent != 0 && secText.textContent == 0){
+                min = min-1; 
+                minText.textContent = min;
+                sec = 59;
+                secText.textContent = sec;
+            }
+      
 
-        if(minText.textContent != 0 && secText.textContent == 0){
-            sec = 59;
-            secText.textContent = sec;
-            minText.textContent = min-1; 
+            if(hourText.textContent != 0 && minText.textContent == 0){
+                min = 60;
+                minText.textContent = min;
 
-        }
+                hour = hour-1
+                hourText.textContent = hour;
+            }
 
-        if(hourText.textContent != 0 && minText.textContent == 0){
-            min = 60;
-            minText.textContent = min;
-            hourText.textContent = hour-1;
-        }
+
+        if(secText.textContent < 10 ) {
+            secText.textContent = '0' + sec;
+            }
+        if(minText.textContent < 10 ) {
+            minText.textContent = '0' + min;
+            }
+        // if(hourText.textContent < 10 ) {
+        //     hourText.textContent = '0' + hour;
+        //     }
 
         if(hourText.textContent == 0){
             hourContainer.classList.add('hide');
