@@ -11,6 +11,9 @@ let descArray = [
     },
     {
     descP : `Rock — Paper — Scissors Game VS Computer with Score Tracker. Made from scratch using HTML, Pure CSS, and Vanilla JavaScript.` 
+    },
+    {
+    descP : `To-Do List App. This app remembers your completed and pending tasks when you close or refresh the browser. Made from scratch using HTML, Pure CSS, and Vanilla JavaScript.` 
     }
 
 ]
@@ -55,6 +58,13 @@ let portCardArray = [
         id: "rps",
         link: "https://fitzmina.github.io/rps/",
         img: "img/rps.png",
+        text: "Click to open",
+        target: "_blank"
+    },
+    {
+        id: "todolist",
+        link: "https://fitzmina.github.io/todolist/",
+        img: "img/todo.png",
         text: "Click to open",
         target: "_blank"
     }
@@ -106,8 +116,6 @@ let shuffleInterval = null;
 shuffleWord.addEventListener('mouseover', shuffle);
 
 
-// document.querySelector('.shuffle-word').onmouseover = function(){shuffle()};
-
 function shuffle(){
     let counter = 0;
     clearInterval(shuffleInterval);
@@ -115,15 +123,19 @@ function shuffle(){
         
         shuffleWord.innerText = shuffleWord.innerText.split('').map((ltr, index) => {
 
+                if(index < counter){
+                    return shuffleWord.dataset.word[index];
+                }
+
                 return randomLetters[Math.floor(Math.random() * 8)];
                         
         }).join('');
 
         if(counter > shuffleWord.dataset.word.length){
             clearInterval(shuffleInterval);
-            shuffleWord.innerText = shuffleWord.dataset.word; 
+            
         }
-        counter+= 1/2;
+        counter+= 1/4;
         
     }, 100);
     

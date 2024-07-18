@@ -71,7 +71,7 @@ body{
 .dice-container p{
     display: block;
     padding: 1rem 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
     position: absolute;
     top: 0;
@@ -163,7 +163,7 @@ img{
 
 
 .dice-container button{
-    width: 10rem;
+    width: 12rem;
     border: none;
     cursor: pointer;
     background-color: rgb(253, 34, 34);
@@ -172,6 +172,7 @@ img{
     border-radius: 1.2rem;
     color: whitesmoke;
     transition: all 0.4s;
+    font-size: 2rem;
 }
 
 .dice-container button:active{

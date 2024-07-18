@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to left, darkslateblue, midnightblue 50%, darkslateblue);
+    color: aliceblue;
+    
+}
+
+h1{
+   margin-top: 60px;
+   margin-bottom: 20px;
+   text-align: center;
+   font-size: 50px;
+}
+
+.container{
+    max-width: 430px;
+    padding: 0 1px;
+    margin: 0 auto;
+}
+
+.container input{
+    width: 383px;
+    margin-bottom: 10px;
+    height: 30px;
+    padding-left: 5px;
+    background: ghostwhite;
+    outline: none;
+    border: none;
+    
+}
+
+ul{
+    
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ul li{
+    width: 390px;
+    
+}
+
+.task-div-container{
+    display: flex;
+    gap: 10px;
+    width: 427px;
+    font-size: 25px;
+}
+
+.task-div-container li{
+    flex: 2;
+}
+
+.line-through{
+    text-decoration: line-through;
+}
+
+button{
+    border: none;
+    background-color: ghostwhite;
+    width: 40px;
+    height: 30px;
+}
+
+i{
+    pointer-events: none;
+    
+}
+
