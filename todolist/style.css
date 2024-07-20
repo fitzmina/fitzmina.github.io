@@ -1,84 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    overflow-x: hidden;
+html {
+  overflow-x: hidden;
 }
 
-
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(to left, darkslateblue, midnightblue 50%, darkslateblue);
-    color: aliceblue;
-    
+body {
+  display: grid;
+  place-content: center;
+  background: #444;
+  color: aliceblue;
 }
 
-h1{
-   margin-top: 60px;
-   margin-bottom: 20px;
-   text-align: center;
-   font-size: 50px;
+.super-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
 }
 
-.container{
-    max-width: 430px;
-    padding: 0 1px;
-    margin: 0 auto;
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 50px;
 }
 
-.container input{
-    width: 383px;
-    margin-bottom: 10px;
-    height: 30px;
-    padding-left: 5px;
-    background: ghostwhite;
-    outline: none;
-    border: none;
-    
+.container {
+  padding: 0 1px;
+  margin: 0 auto;
 }
 
-ul{
-    
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.container input {
+  margin-bottom: 10px;
+  height: 30px;
+  padding-left: 5px;
+  background: rgb(231, 231, 238);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 364px;
 }
 
-ul li{
-    width: 390px;
-    
+input::placeholder {
+  color: black;
 }
 
-.task-div-container{
-    display: flex;
-    gap: 10px;
-    width: 427px;
-    font-size: 25px;
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.task-div-container li{
-    flex: 2;
+.task-div-container {
+  display: flex;
+  gap: 10px;
+  font-size: 27px;
 }
 
-.line-through{
-    text-decoration: line-through;
+.task-div-container li {
+  flex: 2;
 }
 
-button{
-    border: none;
-    background-color: ghostwhite;
-    width: 40px;
-    height: 30px;
+.line-through {
+  text-decoration: line-through;
 }
 
-i{
-    pointer-events: none;
-    
+button {
+  border: none;
+  background-color: rgb(196, 196, 228);
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
 }
 
+i {
+  pointer-events: none;
+}
