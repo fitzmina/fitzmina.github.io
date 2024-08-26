@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Timer</title>
+</head>
+<body>
+    <div class="main-container">
+        
+        <div class="time-container">
+            <div class="circle hide">
+            </div>
+            <div class="times-container hour-container">
+                <span class="title1 title-group">Hour</span>
+                <span class="hour hour-up arrow-up arrow-group">&#10094</span>
+                <span class="hour hour-text">00</span>
+                <span class="hour hour-down arrow-down arrow-group">&#10095</span>
+            </div>
+            <div class="divider divider-group">:</div>
+            <div class="times-container min-container">
+                <span class="title2 title-group">Minutes</span>
+                <span class="min min-up arrow-up arrow-group">&#10094</span>
+                <span class="min min-text">00</span>
+                <span class="min min-down arrow-down arrow-group">&#10095</span>
+            </div>
+
+            <div class="divider2 divider-group">:</div>
+            <div class="times-container sec-container">
+                <span class="title3 title-group">Seconds</span>
+                <span class="sec sec-up arrow-up arrow-group">&#10094</span>
+                <span class="sec sec-text">00</span>
+                <span class="sec sec-down arrow-down arrow-group">&#10095</span>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button class="btn start">Start</button>
+            <button class="btn pause hide reset-pause">Pause</button>
+            <button class="btn reset hide reset-pause">Reset</button>
+        </div>
+    </div>
+</body>
+</html>

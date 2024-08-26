@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  font-size: 1.6rem;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  background: darkslateblue;
+}
+
+.time-container .circle {
+  position: absolute;
+  margin: 0 auto;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  z-index: -1;
+  animation: circle 5s linear infinite;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #0033ff;
+  }
+  25% {
+    transform: rotate(90deg);
+    box-shadow: 1px 5px 2px #ff6600;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #6e0dd0;
+  }
+  75% {
+    transform: rotate(270deg);
+    box-shadow: 1px 5px 2px #33ff00;
+  }
+
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #0033ff;
+  }
+}
+
+.time-container .circle:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.circle.pause-circle {
+  animation: none;
+}
+
+.main-container {
+  border-radius: 1rem;
+  width: 39rem;
+  height: 58rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #333;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.6),
+    -0.1rem -0.1rem 0.5rem rgba(255, 255, 255, 0.1);
+}
+
+.time-container {
+  position: relative;
+  width: 37rem;
+  height: 35rem;
+  border-radius: 1rem;
+  color: rgb(255, 255, 255);
+  display: flex;
+  gap: 1.3rem;
+  z-index: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.times-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 8.5rem;
+}
+
+.title1,
+.title2,
+.title3 {
+  display: inline-block;
+  font-size: 2.5rem;
+}
+
+.hour,
+.min,
+.sec {
+  display: inline-block;
+}
+
+.hour-text,
+.min-text,
+.sec-text {
+  font-size: 7rem;
+}
+
+.arrow-up {
+  font-size: 4rem;
+  rotate: 90deg;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.arrow-down {
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 2.1rem;
+  rotate: 90deg;
+  cursor: pointer;
+  display: block;
+}
+
+.divider,
+.divider2 {
+  font-size: 8rem;
+  opacity: 1;
+}
+
+.marginDivider {
+  margin-bottom: 1.2rem;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.btn-container {
+  display: flex;
+  gap: 6rem;
+}
+
+.btn {
+  cursor: pointer;
+  height: 5rem;
+  width: 12rem;
+  filter: blur(0.01rem);
+  color: rgba(240, 248, 255, 0.75);
+  border-radius: 3rem;
+  border: none;
+  letter-spacing: 0.2rem;
+  transition: all 0.1s;
+  font-weight: 700;
+  font-size: 2.1rem;
+}
+
+.btn:hover {
+  color: rgb(240, 248, 255);
+}
+
+.hide {
+  display: none;
+}
+
+.compress {
+  gap: 0.6rem;
+}
+
+.btn-container .start {
+  background-color: mediumslateblue;
+}
+.btn-container .pause {
+  background-color: firebrick;
+}
+.btn-container .reset {
+  background-color: rgb(239, 232, 232);
+  color: rgba(0, 0, 0, 0.77);
+}
+
+.btn-container .reset:hover {
+  color: rgba(0, 0, 0, 1);
+}

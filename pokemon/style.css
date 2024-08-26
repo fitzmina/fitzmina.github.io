@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  height: 100vh;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background: linear-gradient(
+      rgb(86, 86, 245),
+      rgb(214, 205, 205),
+      rgb(208, 212, 217),
+      rgb(216, 209, 209)
+    )
+    no-repeat;
+}
+
+.search-container {
+  display: flex;
+  gap: 3px;
+  flex-direction: column;
+  height: 40px;
+  width: 390px;
+  position: relative;
+}
+
+input[type="text"] {
+  flex: 1;
+  font-size: 20px;
+  padding-left: 5px;
+  border-radius: 5px;
+  background-color: rgb(240, 232, 232);
+}
+
+.hide {
+  display: none;
+}
+
+.poke-div-container {
+  width: 100%;
+  max-height: 500px;
+  background-color: rgb(240, 232, 232);
+  overflow: hidden;
+  overflow-y: scroll;
+  top: 40px;
+  position: absolute;
+  z-index: 999;
+  font-size: 25px;
+  border: 1px solid rgb(81, 80, 80);
+}
+
+.poke-div-container span {
+  color: black;
+  display: block;
+  text-transform: capitalize;
+  margin-left: 5px;
+}
+
+.list-container {
+  border-bottom: 1px solid rgb(162, 157, 157);
+  height: 30px;
+  cursor: pointer;
+}
+
+.list-container:hover {
+  background-color: hsl(0, 22%, 86%);
+}
+
+button {
+  width: 60px;
+  border-radius: 5px;
+  border: none;
+  background-color: #d5ceca;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  box-shadow: 2px 2px #a6a29f;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.card-style {
+  width: 390px;
+  height: 500px;
+  background-color: #c6c0bd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px 5px 70px 5px;
+  box-shadow: 5px 5px #a09e9d;
+}
+
+.card-img-container {
+  margin-top: 20px;
+  display: grid;
+  place-content: center;
+  background-color: #918e94;
+  width: 370px;
+  height: 200px;
+  border-radius: 5px 5px 25px 5px;
+}
+
+.card-img-container-inner {
+  width: 330px;
+  height: 170px;
+  background-color: #80a050;
+  border-radius: 1px;
+  display: flex;
+  font-size: 20px;
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.home-display {
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+}
+
+.card-img {
+  width: 50%;
+  height: 100%;
+  display: none;
+}
+
+.poke-name {
+  display: block;
+  font-size: 25px;
+}
+
+.row-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 100%;
+  align-self: center;
+  width: 50%;
+  padding: 20px;
+  display: none;
+}
+
+.row-1 * {
+  display: inline-block;
+}
+
+.card-stats-style {
+  width: 370px;
+  height: 250px;
+  display: flex;
+}
+
+.dpad-div-style,
+.ab-div-style {
+  height: 100%;
+  width: 50%;
+}
+
+.dpad-style {
+  margin-top: 25px;
+  margin-left: 10px;
+  /* background-color: #80a050; */
+  width: 130px;
+  height: 130px;
+  position: relative;
+}
+
+.dpad-style::before,
+.dpad-style::after {
+  content: "";
+  position: absolute;
+  background-color: #272727;
+}
+
+.dpad-style::before {
+  width: 30%;
+  height: 90%;
+  left: 35%;
+  margin-top: 5%;
+}
+
+.dpad-style::after {
+  top: 35%;
+  width: 90%;
+  height: 30%;
+  margin-left: 5%;
+}
+
+.ab-div-style {
+  position: relative;
+}
+
+.a-btn-style,
+.b-btn-style {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #a02b5b;
+  box-shadow: 2px 2px #73173d;
+}
+
+.a-btn-style {
+  margin-top: 40px;
+  margin-left: 110px;
+}
+
+.b-btn-style {
+  margin-top: -20px;
+  margin-left: 55px;
+}
+
+.a-ltr,
+.b-ltr {
+  position: absolute;
+  transform: rotate(-39deg);
+
+  font-size: 15px;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.a-ltr {
+  top: 91px;
+  right: 14px;
+}
+
+.b-ltr {
+  top: 126px;
+  right: 68px;
+}
+
+.select-btn-style,
+.start-btn-style {
+  width: 50px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: #837c83;
+
+  transform: rotate(-34deg);
+  box-shadow: 2px 2px #524a4a;
+}
+
+.select-btn-style {
+  margin-top: 40px;
+  margin-left: 130px;
+}
+
+.start-btn-style {
+  margin-top: 65px;
+  margin-left: 3px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+    <title>Pokemon API</title>
+  </head>
+  <body>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
+      width="300"
+      height="80"
+      class="logo"
+    />
+
+    <div class="search-container">
+      <input
+        title="Search Pokemon. Enter Pokemon Name."
+        class="poke-input"
+        type="text"
+        required
+        placeholder="Search Pokemon. Enter Pokemon Name."
+      />
+      <div class="poke-div-container hide" data-container></div>
+
+      <template data-template>
+        <div class="list-container">
+          <span class="list-item" data-poke-link></span>
+        </div>
+      </template>
+    </div>
+    <div class="poke-container">
+      <div class="card-container"></div>
+    </div>
+  </body>
+</html>

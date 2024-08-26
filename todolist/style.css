@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background: midnightblue;
+  color: aliceblue;
+}
+
+.super-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+}
+
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 45px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.input-container {
+  gap: 0;
+  display: flex;
+  height: 40px;
+}
+
+.container input {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  height: 30px;
+  padding-left: 5px;
+  background: rgb(231, 231, 238);
+  outline: none;
+  border: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  width: 360px;
+}
+
+input::placeholder {
+  color: black;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-div-container {
+  display: flex;
+  gap: 10px;
+
+  background-color: rgba(124, 121, 118, 0.568);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.task-div-container li {
+  flex: 2;
+}
+
+.listArray {
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.task-container button {
+  border: none;
+  background-color: lightcyan;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-btn {
+  margin-top: 1px;
+  color: rgb(251, 251, 251);
+  border: none;
+  background-color: rgb(241, 134, 138);
+  width: 30px;
+  height: 30px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  transition: all 0.2s;
+}
+
+.check-btn.checked {
+  background-color: rgb(23, 127, 168);
+  color: azure;
+}
+
+.add-btn:hover {
+  scale: 1.05;
+}
+
+.check-btn:hover {
+  background-color: rgb(28, 123, 182);
+  color: aliceblue;
+}
+
+.del-btn:hover {
+  background-color: tomato;
+  color: aliceblue;
+}
+
+i {
+  pointer-events: none;
+}
