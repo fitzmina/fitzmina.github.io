@@ -425,7 +425,7 @@ main {
 .portfolio-img-container {
   height: 40rem;
   width: 100%;
-  scale: 1.01;
+  /* scale: 1.01; */
 }
 
 /* .portfolio-text-container {
@@ -496,7 +496,7 @@ main {
   width: 100%;
   background-color: rgb(7, 92, 177);
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   font-size: 20px;
   color: ghostwhite;
   height: 4rem;
@@ -552,24 +552,28 @@ main {
 :hover:is(
     .skill-btn:nth-child(1),
     .skill-btn:nth-child(2),
-    .skill-btn:nth-child(3)
+    .skill-btn:nth-child(3),
+    .skill-btn:nth-child(4),
+    .skill-btn:nth-child(5)
   ) {
   color: rgba(255, 255, 255, 1);
 }
 :active:is(
     .skill-btn:nth-child(1),
     .skill-btn:nth-child(2),
-    .skill-btn:nth-child(3)
+    .skill-btn:nth-child(3),
+    .skill-btn:nth-child(4),
+    .skill-btn:nth-child(5)
   ) {
   box-shadow: none;
   transform: translateY(0.5rem);
 }
 
-:is(.skill-btn:nth-child(4), .skill-btn:nth-child(5), .skill-btn:nth-child(6)) {
+.skill-btn:nth-child(6) {
   color: rgba(255, 255, 255, 0.5);
 }
 
-:is(.react-btn, .node-btn, .next-btn) {
+.node-btn {
   cursor: progress;
   background-color: gray;
   box-shadow: 0 0.5rem 0 rgb(90, 90, 90);
@@ -881,7 +885,7 @@ footer {
   .portfolio-img-container {
     height: 45rem;
 
-    scale: 1.01;
+    /* scale: 1.01; */
   }
   .skills-container {
     display: grid;

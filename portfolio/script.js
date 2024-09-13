@@ -224,9 +224,9 @@ document.addEventListener("DOMContentLoaded", () => {
 const jsBtn = document.querySelector(".js-btn");
 const htmlBtn = document.querySelector(".html-btn");
 const cssBtn = document.querySelector(".css-btn");
-// const reactBtn = document.querySelector('.react-btn');
+const reactBtn = document.querySelector(".react-btn");
 // const nodeBtn = document.querySelector('.node-btn');
-// const nextBtn = document.querySelector('.next-btn');
+const tailwindBtn = document.querySelector(".tailwind-btn");
 const cube = document.querySelector(".cube");
 
 jsBtn.addEventListener("click", () => {
@@ -240,15 +240,16 @@ cssBtn.addEventListener("click", () => {
   cube.style.transform = "rotateX(-90deg)";
 });
 
-// reactBtn.addEventListener('click',() =>{
-//     cube.style.transform = "rotateY(-90deg)";
-// });
+reactBtn.addEventListener("click", () => {
+  cube.style.transform = "rotateY(-90deg)";
+});
+
 // nodeBtn.addEventListener('click',() =>{
 //     cube.style.transform = "rotateY(90deg)";
 // });
-// nextBtn.addEventListener('click',() =>{
-//     cube.style.transform = "rotateX(90deg)";
-// });
+tailwindBtn.addEventListener("click", () => {
+  cube.style.transform = "rotateX(90deg)";
+});
 
 //skill buttons
 
