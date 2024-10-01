@@ -14,6 +14,9 @@ let descArray = [
     descP: `Pokemon API. Search Pokemons by their name or Get Random Pokemons. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
   },
   {
+    descP: `Form Validation. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
+  },
+  {
     descP: `Tic-Tac-Toe Game. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
   },
   {
@@ -53,6 +56,12 @@ let portCardArray = [
     id: "pokemon",
     link: "https://fitzmina.github.io/pokemon/",
     img: "img/pokemon.png",
+    target: "_blank",
+  },
+  {
+    id: "form",
+    link: "https://fitzmina.github.io/form/",
+    img: "img/form.png",
     target: "_blank",
   },
   {

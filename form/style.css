@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background: #333;
+}
+
+.form-container {
+  background-color: rgb(230, 223, 223);
+  padding: 0.3125rem;
+  display: grid;
+  place-content: center;
+  margin-top: 3.125rem;
+  border-radius: 0.25rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 25rem;
+  padding: 0.3125rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.625rem;
+  border: 2px solid #ffffff;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.input-div {
+  height: 4.8rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+button {
+  font-size: medium;
+  padding: 0.625rem;
+  margin-top: 0.625rem;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(45, 17, 230);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(45, 17, 230, 0.9);
+  color: rgba(255, 255, 255, 1);
+}
+
+.error-msg {
+  position: absolute;
+  bottom: 0;
+  color: red;
+}
+
+.input-div.error-border input {
+  border: 1px solid red;
+}
+.input-div.success-border input {
+  border: 1px solid green;
+}
+
+.input-div:nth-child(5) {
+  position: relative;
+}
+.input-div:nth-child(4) {
+  position: relative;
+}
+
+input[type="password"] {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.5rem;
+}
+
+.input-div:nth-child(4) input[type="text"] {
+  letter-spacing: 0.3rem;
+}
+.input-div:nth-child(5) input[type="text"] {
+  letter-spacing: 0.3rem;
+}
+
+.fa-regular {
+  position: absolute;
+  right: 5px;
+  top: 35px;
+  cursor: pointer;
+}
