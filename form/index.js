@@ -9,13 +9,13 @@ const passwordInputs = document.querySelectorAll('input[type="password"]');
 
 eyeIcons.forEach((eye, i) => {
   eye.addEventListener("click", () => {
-    if (eye.classList.contains("fa-eye")) {
+    if (eye.classList.contains("fa-eye-slash")) {
       passwordInputs[i].type = "text";
-      eye.classList.replace("fa-eye", "fa-eye-slash");
+      eye.classList.replace("fa-eye-slash", "fa-eye");
       eye.title = "Hide password";
     } else {
       passwordInputs[i].type = "password";
-      eye.classList.replace("fa-eye-slash", "fa-eye");
+      eye.classList.replace("fa-eye", "fa-eye-slash");
       eye.title = "Show password";
     }
   });
