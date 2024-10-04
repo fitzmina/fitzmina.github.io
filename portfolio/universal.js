@@ -73,14 +73,14 @@ darkIcons.addEventListener("click", darkMode);
 export function getDarkMode() {
   let getMode = localStorage.getItem("mode");
 
-  if (getMode === "dark") {
-    body.classList.remove("light");
-    footer.classList.remove("light");
-    darkIcons.classList.replace("bi-brightness-high", "bi-moon-stars");
-  } else {
+  if (getMode === "light") {
     body.classList.add("light");
     footer.classList.add("light");
     darkIcons.classList.replace("bi-moon-stars", "bi-brightness-high");
+  } else {
+    body.classList.remove("light");
+    footer.classList.remove("light");
+    darkIcons.classList.replace("bi-brightness-high", "bi-moon-stars");
   }
 }
 
