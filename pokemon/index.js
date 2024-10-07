@@ -2,13 +2,10 @@ const cardContainer = document.querySelector(".card-container");
 
 const card = document.createElement("div");
 card.classList.add("card-style");
-
 cardContainer.appendChild(card);
 
 const cardImgContainer = document.createElement("div");
-
 cardImgContainer.classList.add("card-img-container");
-
 card.appendChild(cardImgContainer);
 
 const cardImgContainerInner = document.createElement("div");
@@ -21,22 +18,18 @@ card.appendChild(cardStats);
 
 const dpadDiv = document.createElement("div");
 dpadDiv.classList.add("dpad-div-style");
-
 cardStats.appendChild(dpadDiv);
 
 const dpad = document.createElement("div");
 dpad.classList.add("dpad-style");
-
 dpadDiv.appendChild(dpad);
 
 const abDiv = document.createElement("div");
 abDiv.classList.add("ab-div-style");
-
 cardStats.appendChild(abDiv);
 
 const aBtn = document.createElement("button");
 aBtn.classList.add("a-btn-style");
-
 abDiv.appendChild(aBtn);
 
 const aLtr = document.createElement("span");
@@ -51,12 +44,10 @@ abDiv.appendChild(bLtr);
 
 const bBtn = document.createElement("button");
 bBtn.classList.add("b-btn-style");
-
 abDiv.appendChild(bBtn);
 
 const selectBtn = document.createElement("div");
 selectBtn.classList.add("select-btn-style");
-
 dpadDiv.appendChild(selectBtn);
 
 const startBtn = document.createElement("div");

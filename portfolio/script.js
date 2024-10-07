@@ -14,6 +14,9 @@ let descArray = [
     descP: `Pokemon API. Search Pokemons by their name or Get Random Pokemons. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
   },
   {
+    descP: `Image Slider API. Fetch images from an API. Auto-play and Manual Navigation Buttons. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
+  },
+  {
     descP: `Form Validation. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
   },
   {
@@ -23,13 +26,13 @@ let descArray = [
     descP: `Two Player Dice Game with 3D Dice Animation and Score Tracker. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
   },
   {
-    descP: `Timer App. User can set the timer up to 99 hours. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
+    descP: `Timer App. The user can set the time for up to 99 hours. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
   },
   {
     descP: `Rock — Paper — Scissors Game VS Computer with Score Tracker. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
   },
   {
-    descP: `To-Do List App. This app remembers your completed and pending tasks when you close or refresh the browser. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
+    descP: `To-Do List App. This app remembers your completed and pending tasks even after you close or refresh the browser. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
   },
 ];
 
@@ -56,6 +59,12 @@ let portCardArray = [
     id: "pokemon",
     link: "https://fitzmina.github.io/pokemon/",
     img: "img/pokemon.png",
+    target: "_blank",
+  },
+  {
+    id: "imageslider",
+    link: "https://fitzmina.github.io/imageslider/",
+    img: "img/imageslider.png",
     target: "_blank",
   },
   {

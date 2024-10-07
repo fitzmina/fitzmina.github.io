@@ -1,0 +1,72 @@
+img {
+  width: 25rem;
+  height: 18.75rem;
+  display: none;
+}
+
+body {
+  overflow-y: hidden;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+
+  background-color: #141510;
+}
+
+.main-container {
+  margin-top: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+}
+
+.loading-container {
+  color: ghostwhite;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  width: 25rem;
+  height: 18.75rem;
+  display: none;
+}
+.images-container {
+  transition-duration: 300ms;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+}
+
+.dots-container {
+  display: flex;
+  gap: 0.3125rem;
+}
+
+.play-dots-container {
+  display: flex;
+  gap: 0.3125rem;
+}
+
+.active {
+  display: block;
+}
+
+i {
+  cursor: pointer;
+  color: ghostwhite;
+}
+
+.fa-circle {
+  color: gray;
+}
+
+.highlight {
+  color: yellow;
+}
+
+.fa-circle:hover {
+  color: #f0f0f0;
+}

@@ -635,6 +635,11 @@ main {
   color: #68a063;
 }
 
+.cube img {
+  width: 80%;
+  height: 80%;
+}
+
 .cube .bottom {
   color: aliceblue;
 }
