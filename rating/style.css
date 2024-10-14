@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: #141721;
+  overflow-y: hidden;
+}
+
+.active {
+  color: yellow;
+}
+
+i {
+  color: gray;
+  cursor: pointer;
+  font-size: 5rem;
+}

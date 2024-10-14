@@ -34,6 +34,9 @@ let descArray = [
   {
     descP: `To-Do List App. This app remembers your completed and pending tasks even after you close or refresh the browser. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
   },
+  {
+    descP: `Star Rating. Made from scratch using HTML, CSS, and Vanilla JavaScript.`,
+  },
 ];
 
 descArray.forEach((array, i) => {
@@ -101,6 +104,12 @@ let portCardArray = [
     id: "todolist",
     link: "https://fitzmina.github.io/todolist/",
     img: "img/todo.png",
+    target: "_blank",
+  },
+  {
+    id: "rating",
+    link: "https://fitzmina.github.io/rating/",
+    img: "img/rating.png",
     target: "_blank",
   },
 ];
